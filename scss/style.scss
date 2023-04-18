@@ -1,0 +1,121 @@
+@use '../scss' as *;
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  min-height: 100vh;
+  background-color: $dark-cyan;
+  background-image:
+    url('/assets/img/bg-pattern-top.svg'),
+    url('/assets/img/bg-pattern-bottom.svg');
+  background-repeat: no-repeat, no-repeat;
+  background-size: auto, auto;
+  background-attachment: fixed, fixed;
+  @include colCenter;
+
+  @include onDesktop {
+    background-position: -50% 200%, 150% -150%;
+  }
+
+  @include onMobile {
+    background-position: 130% 180%, -25% -100%;
+  }
+
+  font-family: $kumbh;
+}
+
+.card {
+  border-radius: 1rem;
+
+  @include onDesktop {
+    width: 350px;
+    height: 375px;
+  }
+
+  @include onMobile {
+    width: 330px;
+    height: 375px;
+  }
+
+  &__header {
+    width: 100%;
+    height: 140px;
+
+    &-image {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 1rem 1rem 0 0;
+    }
+  }
+
+  &__body {
+    width: 100%;
+    background-color: white;
+    @include colCenter;
+    position: relative;
+
+    &-image {
+      position: absolute;
+      top: 0%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      border: 5px solid white;
+      border-radius: 50%;
+    }
+
+    &-name {
+      margin-top: 4.5rem;
+      font-size: 18px;
+      font-weight: $bold;
+      color: $very-dark-blue;
+    }
+
+    &-age {
+      color: $grayblue;
+      font-weight: $reg;
+      margin-left: 0.5rem;
+    }
+
+    &-location {
+      margin: 0.5rem 0 1.5rem 0;
+      font-size: 0.9rem;
+      color: $grayblue;
+    }
+
+  }
+
+  &__footer {
+    width: 100%;
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    border-top: 1px solid rgba($grayblue, 0.2);
+    border-radius: 0 0 1rem 1rem;
+    padding: 1.5rem 3rem 1.5rem 3rem;
+
+    &-section {
+      text-align: center;
+
+      &-value {
+        color: $very-dark-blue;
+        font-size: 18px;
+        font-weight: $bold;
+        margin-bottom: 0.5rem;
+      }
+
+      &-title {
+        color: $grayblue;
+        font-size: 0.65rem;
+        letter-spacing: 0.1rem;
+      }
+    }
+  }
+}

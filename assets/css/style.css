@@ -10,7 +10,7 @@ body {
   width: 100%;
   min-height: 100vh;
   background-color: hsl(185, 75%, 39%);
-  background-image: url("../img/bg-pattern-top.svg"), url("../img/bg-pattern-bottom.svg");
+  background-image: url("/assets/img/bg-pattern-top.svg"), url("/assets/img/bg-pattern-bottom.svg");
   background-repeat: no-repeat, no-repeat;
   background-size: auto, auto;
   background-attachment: fixed, fixed;
@@ -25,7 +25,7 @@ body {
     background-position: -50% 200%, 150% -150%;
   }
 }
-@media screen and (max-width: 576px) {
+@media screen and (min-width: 576px) {
   body {
     background-position: 130% 180%, -25% -100%;
   }
@@ -40,7 +40,7 @@ body {
     height: 375px;
   }
 }
-@media screen and (max-width: 576px) {
+@media screen and (min-width: 576px) {
   .card {
     width: 330px;
     height: 375px;
@@ -75,7 +75,7 @@ body {
 }
 .card__body-name {
   margin-top: 4.5rem;
-  font-size: 1.2rem;
+  font-size: 18px;
   font-weight: 700;
   color: hsl(229, 23%, 23%);
 }
@@ -103,7 +103,7 @@ body {
 }
 .card__footer-section-value {
   color: hsl(229, 23%, 23%);
-  font-size: 1.2rem;
+  font-size: 18px;
   font-weight: 700;
   margin-bottom: 0.5rem;
 }
