@@ -1,0 +1,116 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  min-height: 100vh;
+  background-color: hsl(185, 75%, 39%);
+  background-image: url("/assets/img/bg-pattern-top.svg"), url("/assets/img/bg-pattern-bottom.svg");
+  background-repeat: no-repeat, no-repeat;
+  background-size: auto, auto;
+  background-attachment: fixed, fixed;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: "Kumbh Sans", sans-serif;
+}
+@media screen and (min-width: 577px) {
+  body {
+    background-position: -50% 200%, 150% -150%;
+  }
+}
+@media screen and (max-width: 576px) {
+  body {
+    background-position: 130% 180%, -25% -100%;
+  }
+}
+
+.card {
+  border-radius: 1rem;
+}
+@media screen and (min-width: 577px) {
+  .card {
+    width: 350px;
+    height: 375px;
+  }
+}
+@media screen and (max-width: 576px) {
+  .card {
+    width: 330px;
+    height: 375px;
+  }
+}
+.card__header {
+  width: 100%;
+  height: 140px;
+}
+.card__header-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 1rem 1rem 0 0;
+}
+.card__body {
+  width: 100%;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.card__body-image {
+  position: absolute;
+  top: 0%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: 5px solid white;
+  border-radius: 50%;
+}
+.card__body-name {
+  margin-top: 4.5rem;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: hsl(229, 23%, 23%);
+}
+.card__body-age {
+  color: hsl(227, 10%, 46%);
+  font-weight: 400;
+  margin-left: 0.5rem;
+}
+.card__body-location {
+  margin: 0.5rem 0 1.5rem 0;
+  font-size: 0.9rem;
+  color: hsl(227, 10%, 46%);
+}
+.card__footer {
+  width: 100%;
+  background-color: white;
+  display: flex;
+  justify-content: space-between;
+  border-top: 1px solid rgba(106, 111, 129, 0.2);
+  border-radius: 0 0 1rem 1rem;
+  padding: 1.5rem 3rem 1.5rem 3rem;
+}
+.card__footer-section {
+  text-align: center;
+}
+.card__footer-section-value {
+  color: hsl(229, 23%, 23%);
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+.card__footer-section-title {
+  color: hsl(227, 10%, 46%);
+  font-size: 0.65rem;
+  letter-spacing: 0.1rem;
+}
+
+/*# sourceMappingURL=style.css.map */
